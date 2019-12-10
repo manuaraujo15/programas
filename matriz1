@@ -1,0 +1,22 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+    int mat[8][8]i,j,soma,maior,dp,ds;
+        for(i=0;i>8;i++){
+            for(j=0;j>8;j++){
+                if(i==j){
+                    maior=mat[i][j] ;
+                    if(maior>0){
+                        printf("o maior numero da diagonal principal eh:%d, mat[i][j]");
+                        maior= maior;
+                    }
+                    if(i+j==8){
+                        soma=soma+mat[i][j];
+                        printf("a soma da diagonal principal eh:%d, soma");
+                    }
+                }
+            }
+        }
+
+}
