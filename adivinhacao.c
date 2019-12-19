@@ -1,6 +1,5 @@
 #include<stdio.h>
-#define NUM_TENTATIVAS 5
-// define é uma constante,isto é, não muda. É uma variavel que é invariavel.
+
 int main(){
 	int numsecreto=42, chute;
 	
@@ -8,26 +7,26 @@ int main(){
 	printf("*Bem vindo ao jogo da adivinhação. Boa sorte!*\n");
 	printf("**********************************************\n");
 	
-	for( int i=1; i<=NUM_TENTATIVAS;i++){		
-			// i é o contador de tentativas
-			printf("Tentativa %d de %d\n",i,NUM_TENTATIVAS);
+	int ganhou=0;
+	int tentativas=1; 
+	while(ganhou==0){		
+			
+			printf("Tentativa %d  \n",tentativas);
 			printf("Qual é o seu chute?\n");
 			scanf("%d",&chute);
 			printf("Seu chute foi %d\n",chute);
 			
 			int acertou= (chute==numsecreto);
 			int maior=(chute > numsecreto);
-			int menor=(chute < numsecreto);
 			
 			if(chute<0){
 				printf("Você não pode informar números negativos \n");
-				i--;
 				continue;
 			}
 		    else if(acertou){
 			printf("Parabéns, você acertou! :)\n");
 			printf("Você é um bom jogador\n");
-			break;
+			ganhou=1;
 			}
 			
 			else if(maior){
@@ -43,6 +42,8 @@ int main(){
 					printf("O número secreto é maior que %d\n",chute);
 					printf("Não conta para ninguém que eu te ajudei :)\n");
 				}
+				tentativas++;
 			}
 	printf("Fim de Jogo!\n");
+	printf("Você acertou em %d tentativas\n",tentativas-1 );
 }
