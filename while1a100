@@ -1,0 +1,9 @@
+#include <stdio.h>
+int main(){
+	while(i=1){
+	int i;
+	i++;
+	printf(" %d ",i);
+	i=111;
+	}
+}

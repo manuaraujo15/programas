@@ -8,4 +8,5 @@ int main(){
 
 	mult=x*y;
 	printf("o resultado da multiplicacão é %d!",mult);
+
 }
